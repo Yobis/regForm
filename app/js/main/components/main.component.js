@@ -7,11 +7,12 @@ module.exports = angular
 	transclude: true
 });
 
-function MainController(localStorageService, $scope) {
+function MainController(localStorageService) {
 	var ctrl = this;
-	$scope.submit = function () {
-			localStorageService.set('user', $scope.user);
-			localStorageService.set('email', $scope.email);
-			localStorageService.set('pass', $scope.pass);
+	ctrl.submit = function () {
+		// debugger;
+			localStorageService.set('user', ctrl.user);
+			localStorageService.set('email', ctrl.email);
+			localStorageService.set('pass', ctrl.pass);
 	}
 }

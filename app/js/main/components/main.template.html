@@ -1,15 +1,15 @@
 <form action="" name="regForm" class="form" novalidate>
 	<h3>registration form</h3>
-	<input type="text" placeholder="login name" ng-model="user" name="user" required>
+	<input type="text" placeholder="login name" ng-model="$ctrl.user" name="user" required>
 	<span style="color:red" ng-show="regForm.user.$dirty && regForm.user.$invalid">
 		<span ng-show="regForm.user.$error.required">Name is required.</span>
 	</span>
-	<input type="email" placeholder="email" ng-model="email" name="email" required>
+	<input type="email" placeholder="email" ng-model="$ctrl.email" name="email" required>
 	<span style="color:red" ng-show="regForm.email.$dirty && regForm.email.$invalid">
 		<span ng-show="regForm.email.$error.required">Email is required.</span>
 		<span ng-show="regForm.email.$error.email">Invalid email address.</span>
 	</span>
-	<input type="password" placeholder="password" ng-model="pass" name="pass" required>
+	<input type="password" placeholder="password" ng-model="$ctrl.pass" name="pass" required>
 	<span style="color:red" ng-show="regForm.pass.$dirty && regForm.pass.$invalid">
 		<span ng-show="regForm.pass.$error.required">Pass is required.</span>
 	</span>
@@ -24,8 +24,8 @@
 		ng-disabled="regForm.$pristine || regForm.user.$dirty && regForm.user.$invalid ||
 		regForm.email.$dirty && regForm.email.$invalid ||
 		regForm.pass.$dirty && regForm.pass.$invalid || regForm.pass.$valid != regForm.checkPass.$valid"
-		ng-click="submit()">Submit</button>
-		{{userValue}}
+		ng-click="$ctrl.submit()">Submit</button>
+
 
 	</div>
 </form>
