@@ -4,10 +4,12 @@ var angular = require('angular'),
 require('@angular/router/angular1/angular_1_router');
 require('angular-local-storage/dist/angular-local-storage.min.js');
 require('angular-password/angular-password.min.js');
+require('angular-messages/angular-messages.min.js');
 
 angular.module('app',
     [
     	'LocalStorageModule',
+      'ngMessages',
     	'ngPassword',
       mainModule.name,
       loginModule.name

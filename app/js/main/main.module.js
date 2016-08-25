@@ -8,4 +8,3 @@ module.exports = angular.module("app.main", [
   mainComponent.name,
   mainRoute.name
 ]);
-
